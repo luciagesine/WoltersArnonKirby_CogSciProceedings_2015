@@ -7,16 +7,36 @@
       padding: 0;
       height: 100%;
       background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
     }
-    embed {
+    .pdf-desktop {
       display: block;
       width: 100%;
       height: 100%;
       border: none;
     }
+    .mobile-message {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .pdf-desktop {
+        display: none;
+      }
+      .mobile-message {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
-  <embed src="WoltersArnonKirby_CogSciProceedings_2025.pdf" type="application/pdf" />
+  <embed src="WoltersArnonKirby_CogSciProceedings_2025.pdf" type="application/pdf" class="pdf-desktop" />
+  <div class="mobile-message">
+    <p>This PDF cannot be displayed inline on your device.</p>
+    <a href="WoltersArnonKirby_CogSciProceedings_2025.pdf" style="color: #00f;">Tap here to open the PDF</a>
+  </div>
 </body>
 </html>
